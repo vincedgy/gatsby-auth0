@@ -1,0 +1,38 @@
+$active-nav-item-fg-color: #202020;
+
+.header {
+  margin-bottom: 3rem;
+
+  .title {
+    color: black;
+    text-shadow:1px 1px 3px grey;
+    text-decoration: none;
+    font-size: 3rem;
+  }
+
+  .nav-list {
+    display: flex;
+    margin: 0;
+    list-style: none;
+
+    background-color: #202020;
+
+    .nav-item {
+      color: #999999;
+      padding-right: 1.3rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+
+    .nav-item:hover {
+        color: $active-nav-item-fg-color;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1200ms;
+    }
+
+    .active-nav-item {
+        color: $active-nav-item-fg-color;
+    }
+  }
+}
