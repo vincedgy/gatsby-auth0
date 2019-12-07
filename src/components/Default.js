@@ -1,8 +1,11 @@
 import React from 'react'
-const Default = () => {
+import { Link } from 'gatsby'
+
+const Default = ({user}) => {
   return (
     <div>
-      <p>Hi ! This is the default page</p>
+    <h2>Hi, {user.name ? user.name : "friend"}!</h2>
+    <p>Go to your profile <Link to="app/profile">here</Link>.</p>
     </div>
   )
 }

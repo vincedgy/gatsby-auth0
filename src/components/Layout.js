@@ -7,8 +7,9 @@ const Layout = ({ children }) => {
     <div className={layoutStyles.container}>
       <div className={layoutStyles.content}>
         <nav>
-          <Link to="/">Home</Link>{' '}
-          <Link to="app/account">Account</Link>
+          <Link to="/" activeClassName={layoutStyles.active}>Home</Link>{' '}
+          <Link to="/app" activeClassName={layoutStyles.active}>Go to application</Link>{' '}
+          <Link to="/app/profile" activeClassName={layoutStyles.active}>Profile</Link>
         </nav>
       </div>
       {children}
