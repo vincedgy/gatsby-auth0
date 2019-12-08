@@ -73,9 +73,11 @@ const tokens = {
   export const silentAuth = callback => {
     if (!isAuthenticated()) return callback()
     auth.checkSession({}, setSession(callback))
+    return;
   }
 
   export const logout = () => {
     localStorage.setItem("isLoggedIn", false)
     auth.logout()
+    return;
   }
