@@ -10,16 +10,17 @@ export default () => {
   if (!isAuthenticated()) {
     login()
     return <p>Redirecting to login...</p>
+  } else {
+    const user = getProfile()
+    return (
+      <Layout>
+        <Router>
+          <Profile path="/app/profile" user={user}/>
+          <Default path="/app" user={user} />
+        </Router>
+      </Layout>
+    )
   }
 
-  const user = getProfile()
-  
-  return (
-    <Layout>
-      <Router>
-        <Profile path="/app/profile" user={user}/>
-        <Default path="/app" user={user} />
-      </Router>
-    </Layout>
-  )
+
 }
