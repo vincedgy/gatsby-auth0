@@ -3,7 +3,7 @@ import Layout from "../components/Layout"
 import "../styles/index.scss"
 import SEO from "../components/seo"
 
-export default () => {
+const WelcomePage = () => {
   return (
     <Layout>
       <SEO title="Welcome" />
@@ -12,3 +12,5 @@ export default () => {
     </Layout>
   )
 }
+
+export default WelcomePage
